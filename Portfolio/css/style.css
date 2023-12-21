@@ -1,27 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-:root{
-    --primary: #c300ff;
-    --dark: #0c020d;
-    --light: #f0f3f5;
-    --text-color: #AFB1B3;
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); */
+:root {
+  --primary: #c300ff;
+  --dark: #0c020d;
+  --light: #f0f3f5;
+  --text-color: #afb1b3;
 }
-*{
-    margin: 0;padding:0;
-    scroll-behavior: smooth;
-    transition: all .1s ease;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.1s ease;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
     background-color: var(--dark);
 }
-header,main,footer{
-    max-width: 1020px;
-    margin: auto;
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--text-color);
+}
+img,
+svg {
+  width: 50px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--dark);
+  position: relative;
+  overflow-x: hidden;
+}
+header {
+  position: fixed !important;
+  background-color: var(--dark);
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header a.logo svg {
+  width: 120px;
+}
+header a.menu svg {
+  width: 40px;
+}
+header nav {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  background-color: #0c020d5d;
+  backdrop-filter: saturate(200%) blur(3px);
+  height: 100%;
+  transition: left .4s ease-in;
+}
+header nav.active{
+    left: 0;
+    transition: left .2s ease-out;
+}
+header nav #menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  background-color: var(--dark);
+  padding: 3rem 1rem 1rem;
+  /* gap: 1rem; */
+}
+header nav #menu a.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem 2rem;
+}
+header nav #menu a.close svg {
+  width: 20px;
+}
+header nav #menu .menu-item {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav #menu .menu-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
     padding: 1rem;
 }
-header{
+header nav #menu .menu-item a:hover {
+    color: var(--light);
+    
+}
+header nav .footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 5rem;
+}
+header nav .footer .socials{
+    display: flex;
     align-items: center;
+    gap: 1rem;
+}
+header nav .footer .socials a{
+    opacity: .6;
+}
+header nav .footer .socials a:hover{
+    opacity: 1;
+}
+header nav .footer img{
+    width: 30px;
+}
+header nav .footer p{
+    opacity: .5;
 }
