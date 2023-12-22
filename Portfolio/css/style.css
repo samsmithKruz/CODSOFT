@@ -28,6 +28,26 @@ img,
 svg {
   width: 50px;
 }
+#modal{
+    position: fixed;
+    z-index: 500;
+    background-color: #0c020d5d;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+#modal.active{
+    display: flex;
+}
+#modal img{
+    width: 500px;
+    max-width: 80%;
+}
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
@@ -134,38 +154,48 @@ main {
   margin-top: 6rem;
   margin-inline: auto;
   max-width: 1146px;
+  position: relative;
 }
 section {
-  padding: 1rem;
+    padding: 1rem;
+    position: relative;
 }
-section#hero {
+section .wrapper{
+    left: 200%;
+    position: relative;
+}
+section.view .wrapper{
+    left: 0;
+    transition: left 1s ease;
+}
+section#hero >div {
   /* min-height: 70vh; */
   display: flex;
   color: var(--light);
   justify-content: space-between;
   align-items: center;
 }
-section#hero > img {
+section#hero >div > img {
   width: 40%;
 }
-section#hero .content {
+section#hero >div .content {
   padding-left: 1.5rem;
 }
-section#hero .content h1 {
+section#hero >div .content h1 {
   margin-bottom: 0;
   font-size: 8rem;
   line-height: 1;
 }
-section#hero .content h1 span {
+section#hero >div .content h1 span {
   color: var(--primary);
 }
-section#hero .content h4 {
+section#hero >div .content h4 {
   font-weight: normal;
   font-size: 2rem;
   margin-bottom: 1rem;
   position: relative;
 }
-section#hero .content h4::before {
+section#hero >div .content h4::before {
   position: absolute;
   width: 150px;
   animation: w 3s ease infinite;
@@ -186,18 +216,18 @@ section#hero .content h4::before {
     width: 10px;
   }
 }
-section#hero .content h3 {
+section#hero >div .content h3 {
   font-size: 2rem;
   line-height: 1;
   /* margin-top: .5rem; */
 }
-section#hero .content h3 span {
+section#hero >div .content h3 span {
   background-color: var(--primary);
   color: #fff;
   display: inline-block;
   padding-inline: 0.5rem;
 }
-section#hero .content a.btn {
+section#hero >div .content a.btn {
   background-color: var(--primary);
   display: inline-flex;
   align-items: center;
@@ -209,17 +239,17 @@ section#hero .content a.btn {
   margin: 1rem 0;
   gap: 0.5rem;
 }
-section#hero .content a.btn img {
+section#hero >div .content a.btn img {
   width: 20px;
 }
-section#hero .content a.btn:hover {
+section#hero >div .content a.btn:hover {
   box-shadow: 0 0 5px 3px var(--primary);
 }
 
-section#about {
+section#about >div {
   margin: 3rem 0;
 }
-section#about > div {
+section#about >div > div {
   display: flex;
   gap: 3rem;
 }
@@ -243,32 +273,32 @@ section h4::before {
   background-size: contain;
   /* border: 1px solid red; */
 }
-section#about h3 {
+section#about >div h3 {
   font-size: 3rem;
   color: #fff;
   margin-bottom: 1rem;
   line-height: 1.3;
 }
-section#about p {
+section#about >div p {
   margin-bottom: 1rem;
 }
-section#about .journey {
+section#about >div .journey {
   flex: 1 1 70%;
 }
-section#about .experience {
+section#about >div .experience {
   flex: 1 1 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section#about .experience p {
+section#about >div .experience p {
   text-align: center;
 }
-section#about .experience h1 {
+section#about >div .experience h1 {
   color: #fff;
   font-size: 6rem;
 }
-section#skills #cards {
+section#skills >div #cards {
   display: grid;
   /* align-items: start; */
   grid-template-columns: repeat(6, 1fr);
@@ -277,25 +307,25 @@ section#skills #cards {
   justify-content: space-between;
   /* flex-wrap: wrap; */
 }
-section#skills #cards .card {
+section#skills >div #cards .card {
   display: flex;
   flex-direction: column;
 }
-section#skills #cards .card img {
+section#skills >div #cards .card img {
   height: 70px;
 }
-section#skills #cards .card h5 {
+section#skills >div #cards .card h5 {
   color: var(--light);
   line-height: 1;
   margin-top: 1rem;
   font-size: 1.1rem;
 }
-section#projects{
+section#projects > div{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-section#projects a{
+section#projects > div a{
     color: var(--primary);
 }
 section #items {
@@ -334,43 +364,43 @@ section #items .item img{
     width: 100%;
     object-fit: cover;
 }
-/* section#projects .item {
+/* section#projects > div .item {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
-section#projects .item img {
+section#projects > div .item img {
   width: 130px;
   cursor: pointer;
   align-self: self-start;
 }
-section#projects .item h5 {
+section#projects > div .item h5 {
   color: var(--light);
   font-size: 1.1rem;
 }
-section#projects .item p {
+section#projects > div .item p {
   font-size: 0.85rem;
 }
-section#projects a {
+section#projects > div a {
   color: var(--primary);
 } */
-section#contact {
+section#contact > div {
   padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section#contact h4::before {
+section#contact > div h4::before {
   background-position: center top;
 }
-section#contact h3 {
+section#contact > div h3 {
   color: #fff;
   font-size: 2.5rem;
   line-height: 1.1;
   text-align: center;
   margin-bottom: 1rem;
 }
-section#contact .info {
+section#contact > div .info {
   display: flex;
   align-items: center;
   margin: 0.5rem 0;
@@ -378,10 +408,10 @@ section#contact .info {
   text-decoration: none;
   color: var(--text-color);
 }
-section#contact .info:hover {
+section#contact > div .info:hover {
   color: var(--primary);
 }
-section#contact .info img {
+section#contact > div .info img {
   width: 20px;
 }
 
@@ -408,23 +438,23 @@ footer p {
 
 
 @media screen and (max-width:700px) {
-    section#hero {
+    section#hero >div {
         flex-direction: column-reverse;
         gap: 5rem;
     }
-    section#hero .content{
+    section#hero >div .content{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    section#about > div{
+    section#about >div > div{
         flex-direction: column;
     }
     section #items{
         grid-template-columns: repeat(2, 1fr);
     }
-    section#skills #cards{
+    section#skills >div #cards{
         grid-template-columns: repeat(3,1fr);
     }
 }
