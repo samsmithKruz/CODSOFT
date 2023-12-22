@@ -140,7 +140,7 @@
           <div class="menu-item">
             <a href="#hero">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Services</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Portfolio</a>
             <a href="#contact">Contact</a>
           </div>
@@ -359,7 +359,6 @@
   <script type="text/javascript">
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry.isIntersecting);
         entry.isIntersecting
           ? entry.target.classList.add("view")
           : entry.target.classList.remove("view");

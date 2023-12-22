@@ -45,7 +45,7 @@ svg {
     display: flex;
 }
 #modal img{
-    width: 500px;
+    width: 800px;
     max-width: 80%;
 }
 body {
@@ -157,8 +157,9 @@ main {
   position: relative;
 }
 section {
-    padding: 1rem;
+    padding: 3rem 1rem;
     position: relative;
+    margin-bottom: 3rem;
 }
 section .wrapper{
     left: 200%;
