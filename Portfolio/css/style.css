@@ -12,6 +12,30 @@
   scroll-behavior: smooth;
   transition: all 0.1s ease;
 }
+#preloader img{
+  max-width: 40%;
+  animation: pulse .5s ease infinite ;
+}
+@keyframes pulse {
+  from{
+    width: 90px;
+  }
+  to{
+    width: 120px;
+  }
+}
+#preloader{
+  position: fixed;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(9px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c020de8;
+  top: 0;
+}
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -49,6 +73,13 @@ svg {
     max-width: 80%;
 }
 body {
+  background-attachment: fixed;
+  background-image: url('../assets/bg-mover.png'), url('../assets/bg-mover1.png'), url('../assets/bg-mover2.png');
+  background-position: var(--i0) var(--i1), var(--i2) var(--i3), var(--i4), var(--i5);
+  background-size: 2000px, 2000px, 2000px;
+  background-blend-mode: add,add;
+  transition: background-position 3s ease;
+  background-repeat: no-repeat, no-repeat;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   background-color: var(--dark);
@@ -58,11 +89,11 @@ body {
 }
 header {
   position: fixed !important;
-  background-color: var(--dark);
+  background-color: #0c020dd3;
+  backdrop-filter: blur(4px);
   top: 0;
   left: 0;
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,10 +110,11 @@ header nav {
   position: fixed;
   left: 100%;
   top: 0;
+  z-index: 5;
   width: 100%;
   background-color: #0c020d5d;
   backdrop-filter: saturate(200%) blur(3px);
-  height: 100%;
+  height: 100vh;
   transition: left 0.4s ease-in;
 }
 header nav.active {
@@ -158,6 +190,7 @@ main {
 }
 section {
     padding: 3rem 1rem;
+    width: 100%;
     position: relative;
     margin-bottom: 3rem;
 }
