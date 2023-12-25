@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smith Kruz</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./aos.css" />
     <link rel="shortcut icon" href="./assets/fav.svg" type="image/svg" />
   </head>
   <body>
@@ -188,7 +189,7 @@
     <main>
       <section id="hero">
         <div class="wrapper">
-          <div class="content">
+          <div class="content" data-aos="fade-up" data-aos-delay="500">
             <h1>Hi<span>.</span></h1>
             <h4>I'm Samuel Benny</h4>
             <h3>Full <span>Stack</span> Web Developer</h3>
@@ -199,14 +200,14 @@
               <span>Download Resume</span>
             </a>
           </div>
-          <img src="./assets/img.png" alt="" />
+          <img src="./assets/img.png" alt="" data-aos="fade-up"  />
         </div>
       </section>
       <section id="about">
         <div class="wrapper">
-          <h4>ABOUT ME</h4>
+          <h4 data-aos="fade-up">ABOUT ME</h4>
           <div>
-            <div class="journey">
+            <div class="journey" data-aos="fade-up" data-aos-delay="500">
               <h3>Embarked on the journey of web development since 2017</h3>
               <p>
                 Embarking on my tech journey in 2016, I delved into programming,
@@ -227,7 +228,7 @@
                 landscape remains steadfast.
               </p>
             </div>
-            <div class="experience">
+            <div class="experience" data-aos="fade-up" data-aos-delay="900">
               <h1>6+</h1>
               <p>
                 Over 6 Years of Working Experience and successful project
@@ -239,34 +240,34 @@
       </section>
       <section id="skills">
         <div class="wrapper">
-          <h4>MY SKILLS</h4>
+          <h4 data-aos="fade-up">MY SKILLS</h4>
           <div id="cards">
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
               <img src="./assets/html.svg" alt="HTML" />
               <h5>HTML & CSS</h5>
               <p>5+ Years</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
               <img src="./assets/js.svg" alt="JS" />
               <h5>JavaScript</h5>
               <p>5+ Years</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
               <img src="./assets/php.svg" alt="PHP & MySQL" />
               <h5>PHP & MySQL</h5>
               <p>4+ Years</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
               <img src="./assets/node.svg" alt="Node" />
               <h5>Node.js</h5>
               <p>2+ Years</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="500">
               <img src="./assets/react.svg" alt="REACT" />
               <h5>REACT</h5>
               <p>1+ Years</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="600">
               <img src="./assets/git.svg" alt="HTML" />
               <h5>GIT</h5>
               <p>2+ Years</p>
@@ -276,17 +277,17 @@
       </section>
       <section id="projects">
         <div class="wrapper">
-          <h4>PROJECTS</h4>
+          <h4 data-aos="fade-up">PROJECTS</h4>
           <div id="items">
-            <a href="#" class="item">
+            <a href="#" class="item" data-aos="fade-up" data-aos-delay="200">
               <img src="./assets/url.png" alt="" />
               <div class="description">URL Shortener</div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item" data-aos="fade-up" data-aos-delay="300">
               <img src="./assets/ecommerce.png" alt="" />
               <div class="description">E-commerce Store</div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item" data-aos="fade-up" data-aos-delay="400">
               <img src="./assets/rentease.png" alt="" />
               <div class="description">Property Renter</div>
             </a>
@@ -310,7 +311,7 @@
           >
         </div>
       </section>
-      <section id="contact">
+      <section id="contact" data-aos="fade-up" data-aos-delay="200">
         <div class="wrapper">
           <h4>CONTACT ME</h4>
           <h3>
@@ -360,30 +361,16 @@
     </footer>
   </body>
 
+  <script src="./aos.js"></script>
   <script type="text/javascript">
-    let observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        entry.isIntersecting
-          ? entry.target.classList.add("view")
-          : entry.target.classList.remove("view");
-      });
-    });
-    document.querySelectorAll("main > section").forEach((el) => {
-      observer.observe(el);
-    });
-
+    AOS.init();
     window.onload = (e) => {
       document.querySelector("#preloader").remove();
       let body = document.querySelector("body").style;
       setInterval(()=>{
         for(let i = 0;i<2*3;i++){
           body.setProperty(`--i${i}`, `${Math.ceil(Math.random() * (100 - -100)) + -100}%`);
-
         }
-        // body.setProperty("--i2", `${Math.ceil(Math.random() * (100 - -100)) + -100}%`);
-        // body.setProperty("--i3", `${Math.ceil(Math.random() * (100 - -100)) + -100}%`);
-        // body.setProperty("--i4", `${Math.ceil(Math.random() * (100 - -100)) + -100}%`);
-
       },3000);
       console.log();
     };

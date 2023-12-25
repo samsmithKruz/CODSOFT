@@ -194,14 +194,16 @@ section {
     position: relative;
     margin-bottom: 3rem;
 }
-section .wrapper{
-    left: 200%;
+/* section .wrapper{
+    top: 10rem;
+    opacity: 0;
     position: relative;
 }
 section.view .wrapper{
-    left: 0;
-    transition: left 1s ease;
-}
+    top: 0;
+    opacity: 1;
+    transition: top 1s ease, opacity .5s ease;
+} */
 section#hero >div {
   /* min-height: 70vh; */
   display: flex;
