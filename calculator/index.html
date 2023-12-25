@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
 </head>
 <body>
     <div id="container">
@@ -14,29 +15,29 @@
         </div>
         <div class="keypad">
             <!--  -->
-            <div class="op" style="grid-column: span 2;">AC</div>
-            <div class="op">%</div>
-            <div class="op">&divide;</div>
+            <div class="op" data-key="ac" style="grid-column: span 2;">AC</div>
+            <div class="op" data-key="%">%</div>
+            <div class="op" data-key="/">&divide;</div>
             <!--  -->
             <div class="key">7</div>
             <div class="key">8</div>
             <div class="key">9</div>
-            <div class="op">&times;</div>
+            <div class="op" data-key="*">&times;</div>
             <!--  -->
             <div class="key">4</div>
             <div class="key">5</div>
             <div class="key">6</div>
-            <div class="op">&minus;</div>
+            <div class="op" data-key="-">&minus;</div>
             <!--  -->
             <div class="key">1</div>
             <div class="key">2</div>
             <div class="key">3</div>
-            <div class="op">&plus;</div>
+            <div class="op" data-key="+">&plus;</div>
             <!--  -->
-            <div class="key">&leftarrow;</div>
+            <div class="key" data-key="backspace">&leftarrow;</div>
             <div class="key">0</div>
             <div class="key">.</div>
-            <div class="op">&equals;</div>
+            <div class="op" data-key="=">&equals;</div>
         </div>
     </div>
 </body>

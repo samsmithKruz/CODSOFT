@@ -8,7 +8,7 @@ body{
     background-color: #fafafa;
     display: flex;
     min-height: 100vh;
-    min-width: 100vw;
+    /* min-width: 100vw; */
     padding: 2rem;
     justify-content: center;
     align-items: center;
@@ -31,10 +31,11 @@ body{
     text-align: right;
 }
 .display .output{
-    font-size: 2rem;
+    font-size: 3rem;
 }
 .display .input{
     color: #ddd;
+    font-size: 2rem !important;
 }
 .keypad{
     display: grid;
@@ -48,7 +49,7 @@ body{
     background-color: #eeeeeee3;
     color: #000000;
     border-radius: 50px;
-    padding: 1rem;
+    padding: .8rem;
     user-select: none;
     cursor: pointer;
 }
