@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+img,
+svg {
+  max-width: 100%;
+}
+:root {
+  --blue: #4c2fff;
+  --black: #34353a;
+  --text-black: #8b8b8b;
+  --gradient: linear-gradient(to bottom right, #4c2fff, #8374ff);
+}
+body {
+  font-family: "Inter Tight";
+  color: var(--text-black);
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black);
+}
+header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+header > a {
+  background-color: var(--blue);
+  text-decoration: none;
+  padding: 2rem;
+}
+header > a img {
+  width: 60px;
+}
+header .menu {
+  display: flex;
+  flex: 1 1 auto;
+  padding-left: 2rem;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  gap: 0.5rem;
+}
+header nav a:hover {
+  color: var(--blue);
+  transition: color 0.5s ease;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--black);
+  padding: 1rem;
+}
+header .cta a {
+  text-decoration: none;
+  background: var(--black);
+  padding: 1rem 1.5rem;
+  color: #fff;
+  font-size: 0.85rem;
+  margin-right: 1rem;
+  display: inline-flex;
+  border-radius: 8px;
+}
+header .cta a:hover {
+  background-color: var(--blue);
+  transition: all ease 0.4s;
+}
+header .mobile {
+  display: none;
+  width: 80px;
+  height: 40px;
+}
+header .mobile label {
+  cursor: pointer;
+}
+header .mobile input {
+  display: none;
+}
+header .mobile .bar {
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  flex-direction: column;
+}
+header .mobile .bar span {
+  height: 4px;
+  width: 40px;
+  background-color: var(--black);
+  transition: all ease 0.2s;
+}
+header .mobile input:checked + .bar span:nth-child(1) {
+  position: absolute;
+  transform: rotate(45deg);
+  transition: all ease 0.2s;
+}
+header .mobile input:checked + .bar span:nth-child(2) {
+  transition: all ease 0.2s;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 735px) {
+  header .menu {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    top: 0;
+    left: -200%;
+    width: 250px;
+    max-width: 40%;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 0;
+    transition: left 0.6s ease;
+  }
+  header .menu.active {
+    left: 0;
+    transition: left 0.2s ease;
+  }
+  header nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  header .cta a {
+    border-radius: 0;
+    flex: 1 1 auto;
+    margin-right: 0;
+    /* display: flex; */
+  }
+  header .cta {
+    background-color: red;
+    display: flex;
+    padding: 0;
+  }
+  header .mobile {
+    display: inline-flex;
+  }
+}
+
+/* Main sections */
+#hero {
+  padding-left: 10%;
+  padding-top: 5rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: url("../assets/dots.svg"), url("../assets/dots.svg");
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position: 0% 50%, 95% 0%;
+  animation: movebg 5s ease infinite;
+}
+@keyframes movebg {
+  0% {
+    background-position: 0% 40%, 90% 0%;
+  }
+  50% {
+    background-position: 0% 50%, 95% 0%;
+  }
+  100% {
+    background-position: 0% 40%, 90% 0%;
+  }
+  /* 100%{
+        background-position: 50% 0%, 80% 0%;
+    } */
+}
+#hero > div:first-child {
+  display: flex;
+  align-items: center;
+}
+#hero > div:first-child img {
+  width: 500px;
+  max-width: 45%;
+}
+#hero > div:first-child p {
+  max-width: 50ch;
+}
+#hero > div:first-child h1 {
+  font-size: 3.99rem;
+  max-width: 90%;
+  position: relative;
+  line-height: 1.2;
+}
+#hero > div:first-child h1::before {
+  position: relative;
+  display: block;
+  height: 10px;
+  width: 40%;
+  content: " ";
+  background-color: var(--blue);
+}
+
+#hero > div:nth-child(2) {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  padding-left: calc(2rem + 200px);
+  align-items: center;
+  background-color: var(--blue);
+  background-image: url('../assets/banner_img.png');
+  background-repeat: no-repeat;
+  background-size: 180px 100%;
+  /* background-blend-mode: color-dodge; */
+  object-fit: cover;
+}
+#hero > div:nth-child(2) h5{
+    color: #fff;
+    font-size: 1.1rem;
+}
+#hero > div:nth-child(2) div{
+    display: flex;
+    gap: 1.5rem;
+}
+#hero > div:nth-child(2) div img{
+    width: 50%;
+}

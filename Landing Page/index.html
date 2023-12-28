@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to DEV</title>
+    <link rel="shortcut icon" href="./assets/fav.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <header>
+      <a href="./" class="logo">
+        <img src="./assets/logo.svg" alt="" />
+      </a>
+      <div class="menu">
+          <nav>
+            <a href="./">Home</a>
+            <a href="./">About</a>
+            <a href="./">Service</a>
+            <a href="./">Blog</a>
+            <a href="./">Contact</a>
+          </nav>
+          <div class="cta">
+              <a href="./">Contact Now</a>
+            </div>
+      </div>
+      <div class="mobile">
+        <label for="c">
+            <input type="checkbox" name="c" id="c" />
+            <div class="bar">
+              <span></span>
+              <span></span>
+            </div>
+        </label>
+      </div>
+    <script>
+      let bar = document.querySelector("input[name=c]");
+      bar.onclick = e =>{
+        if(bar.checked){
+          document.querySelector("header .menu").classList.add("active");
+        }else{
+          document.querySelector("header .menu").classList.remove("active");
+        }
+      }
+    </script>
+    </header>
+    <main>
+      <section id="hero">
+        <div>
+            <div>
+                <h1>A Digital Creative Agency</h1>
+                <p>
+                  We work on a diverse range of projects, from helping
+                  start ups get their businesses up.
+                </p>
+            </div>
+            <img src="./assets/hero.png" alt="">
+        </div>
+        <div>
+            <h5>LET'S TALK DESIGN</h5>
+            <div>
+                <a href="./"><img src="./assets/linkedin.svg" alt=""></a>
+                <a href="./"><img src="./assets/whatsapp.svg" alt=""></a>
+                <a href="./"><img src="./assets/facebook.svg" alt=""></a>
+            </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
