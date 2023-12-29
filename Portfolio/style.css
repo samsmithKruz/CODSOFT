@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 :root {
   --primary: #c300ff;
   --dark: #0c020d;
@@ -74,7 +74,7 @@ svg {
 }
 body {
   background-attachment: fixed;
-  background-image: url('../assets/bg-mover.png'), url('../assets/bg-mover1.png'), url('../assets/bg-mover2.png');
+  background-image: url('./assets/bg-mover.png'), url('./assets/bg-mover1.png'), url('./assets/bg-mover2.png');
   background-position: var(--i0) var(--i1), var(--i2) var(--i3), var(--i4), var(--i5);
   background-size: 2000px, 2000px, 2000px;
   background-blend-mode: add,add;
