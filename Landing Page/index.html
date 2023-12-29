@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to DEV</title>
     <link rel="shortcut icon" href="./assets/fav.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
@@ -13,57 +13,307 @@
         <img src="./assets/logo.svg" alt="" />
       </a>
       <div class="menu">
-          <nav>
-            <a href="./">Home</a>
-            <a href="./">About</a>
-            <a href="./">Service</a>
-            <a href="./">Blog</a>
-            <a href="./">Contact</a>
-          </nav>
-          <div class="cta">
-              <a href="./">Contact Now</a>
-            </div>
+        <nav>
+          <a href="./">Home</a>
+          <a href="./">About</a>
+          <a href="./">Service</a>
+          <a href="./">Blog</a>
+          <a href="./">Contact</a>
+        </nav>
+        <div class="cta">
+          <a href="./">Contact Now</a>
+        </div>
       </div>
       <div class="mobile">
         <label for="c">
-            <input type="checkbox" name="c" id="c" />
-            <div class="bar">
-              <span></span>
-              <span></span>
-            </div>
+          <input type="checkbox" name="c" id="c" />
+          <div class="bar">
+            <span></span>
+            <span></span>
+          </div>
         </label>
       </div>
-    <script>
-      let bar = document.querySelector("input[name=c]");
-      bar.onclick = e =>{
-        if(bar.checked){
-          document.querySelector("header .menu").classList.add("active");
-        }else{
-          document.querySelector("header .menu").classList.remove("active");
-        }
-      }
-    </script>
+      <script>
+        let bar = document.querySelector("input[name=c]");
+        bar.onclick = (e) => {
+          if (bar.checked) {
+            document.querySelector("header .menu").classList.add("active");
+          } else {
+            document.querySelector("header .menu").classList.remove("active");
+          }
+        };
+      </script>
     </header>
     <main>
       <section id="hero">
         <div>
-            <div>
-                <h1>A Digital Creative Agency</h1>
-                <p>
-                  We work on a diverse range of projects, from helping
-                  start ups get their businesses up.
-                </p>
-            </div>
-            <img src="./assets/hero.png" alt="">
+          <div>
+            <h1>A Digital Creative Agency</h1>
+            <p>
+              We work on a diverse range of projects, from helping start ups get
+              their businesses up.
+            </p>
+          </div>
+          <img src="./assets/hero.png" alt="" />
         </div>
         <div>
-            <h5>LET'S TALK DESIGN</h5>
-            <div>
-                <a href="./"><img src="./assets/linkedin.svg" alt=""></a>
-                <a href="./"><img src="./assets/whatsapp.svg" alt=""></a>
-                <a href="./"><img src="./assets/facebook.svg" alt=""></a>
-            </div>
+          <h5>LET'S TALK DESIGN</h5>
+          <div>
+            <a href="./"><img src="./assets/linkedin.svg" alt="" /></a>
+            <a href="./"><img src="./assets/whatsapp.svg" alt="" /></a>
+            <a href="./"><img src="./assets/facebook.svg" alt="" /></a>
+          </div>
         </div>
+      </section>
+      <section id="service">
+        <h5>OUR SERVICES</h5>
+        <h4>Services Provided By Us</h4>
+        <div id="cards">
+          <a href="#" class="card">
+            <img src="./assets/product-design.svg" class="icon" alt="" />
+            <h4>Product Design</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              pariatur doloremque ab ullam dolore eveniet?
+            </p>
+            <div href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.0"
+                class="n-svg"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 0.74 0.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer" />
+                  <polygon
+                    class="n-svg"
+                    points="0.47,0.2 0.47,0 0.74,0.27 0.47,0.53 0.47,0.33 0,0.33 0,0.2 "
+                  />
+                </g>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <img src="./assets/ui-ux-design.svg" class="icon" alt="" />
+            <h4>UI UX Design</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              pariatur doloremque ab ullam dolore eveniet?
+            </p>
+            <div href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.0"
+                class="n-svg"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 0.74 0.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer" />
+                  <polygon
+                    class="n-svg"
+                    points="0.47,0.2 0.47,0 0.74,0.27 0.47,0.53 0.47,0.33 0,0.33 0,0.2 "
+                  />
+                </g>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <img src="./assets/development.svg" class="icon" alt="" />
+            <h4>Development</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              pariatur doloremque ab ullam dolore eveniet?
+            </p>
+            <div href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.0"
+                class="n-svg"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 0.74 0.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer" />
+                  <polygon
+                    class="n-svg"
+                    points="0.47,0.2 0.47,0 0.74,0.27 0.47,0.53 0.47,0.33 0,0.33 0,0.2 "
+                  />
+                </g>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <img src="./assets/branding.svg" class="icon" alt="" />
+            <h4>Branding</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              pariatur doloremque ab ullam dolore eveniet?
+            </p>
+            <div href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.0"
+                class="n-svg"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 0.74 0.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer" />
+                  <polygon
+                    class="n-svg"
+                    points="0.47,0.2 0.47,0 0.74,0.27 0.47,0.53 0.47,0.33 0,0.33 0,0.2 "
+                  />
+                </g>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <img src="./assets/graphic-design.svg" class="icon" alt="" />
+            <h4>Graphic Design</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              pariatur doloremque ab ullam dolore eveniet?
+            </p>
+            <div href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.0"
+                class="n-svg"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 0.74 0.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer" />
+                  <polygon
+                    class="n-svg"
+                    points="0.47,0.2 0.47,0 0.74,0.27 0.47,0.53 0.47,0.33 0,0.33 0,0.2 "
+                  />
+                </g>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <img src="./assets/creative-solution.svg" class="icon" alt="" />
+            <h4>Creative Solution</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              pariatur doloremque ab ullam dolore eveniet?
+            </p>
+            <div href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.0"
+                class="n-svg"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 0.74 0.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer" />
+                  <polygon
+                    class="n-svg"
+                    points="0.47,0.2 0.47,0 0.74,0.27 0.47,0.53 0.47,0.33 0,0.33 0,0.2 "
+                  />
+                </g>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section id="brand">
+        <img src="./assets/brand.png" alt="" />
+        <div>
+          <h5>ABOUT US</h5>
+          <h4>Building Brands With Purpose And Passion</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            expedita veniam dolore amet earum, possimus nulla ratione officia
+            adipisci id minima ex, saepe, molestiae tempora!
+          </p>
+          <div class="flex">
+            <div>
+              <h6>Ideas That Provoke</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At?
+              </p>
+            </div>
+            <div>
+              <h6>Ideas That Provoke</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At?
+              </p>
+            </div>
+          </div>
+          <div id="btns">
+            <a href="#" class="btn-primary">Learn More</a>
+            <a href="#" class="btn"
+              ><img src="./assets/play.svg" alt="" /> Watch Video</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="project">
+        <div>
+          <h5>STATISTICS</h5>
+          <h4>Great Ideas start With a Scribble</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+            deserunt iste fugit nostrum nulla impedit asperiores quibusdam.
+            Voluptatem aut, soluta molestiae explicabo ex aspernatur ipsam sed
+            dignissimos necessitatibus odio atque!
+          </p>
+          <a href="#" class="btn-primary">Contact now</a>
+        </div>
+        <img src="./assets/project.svg" alt="" />
       </section>
     </main>
   </body>
